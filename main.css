@@ -38,9 +38,9 @@ body {
     background-color: rgb(246,249,252);
     height: 400px;
     width: 100%;
-    transform: skewY(-10deg);
+    transform: skewY(-8deg);
     position: absolute;
-	top: 1550px;
+	top: 1470px;
 	z-index: -10;
 }
 
@@ -258,6 +258,7 @@ hr {
 .signup h3 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
+	font-size: 20px;
 	color: rgb(115, 111, 223);
 }
 
@@ -296,16 +297,35 @@ hr {
 /* Footer */
 footer {
 	display: grid;
-	/* grid-template-columns: repeat(14. 1fr); */
+	grid-template-columns: repeat(14. 1fr);
 	background-color: rgb(115,111,223);
 	color: white;
 	padding: 80px;
 }
 
+h3 {
+	margin: 0;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+p {
+	font-size: 12px;
+	font-weight: 300;
+}
+
+
+.contact-icon {
+	grid-column: 1;
+	justify-self: end;
+	margin-top: 0;
+	margin-right: 20px;
+}
 .col1 {
 	grid-column: 2;
 	font-weight: 500;
 }
+
 
 .col2 {
 	grid-column: 4;
