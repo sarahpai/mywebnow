@@ -34,6 +34,15 @@ body {
     position: absolute;
     top: 470px;
 }
+.background4 {
+    background-color: rgb(246,249,252);
+    height: 400px;
+    width: 100%;
+    transform: skewY(-10deg);
+    position: absolute;
+	top: 1550px;
+	z-index: -10;
+}
 
 /* Navbar */
 
@@ -80,20 +89,20 @@ nav a {
 
 header {
 	display: grid;
-	grid-template-columns: repeat(14, 1fr);
-	grid-template-rows: 80px 160px 220px 300px;
-	color: white;
-	text-align: center;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: 80px 160px 254px 253px;
+    color: white;
+    text-align: center;
 }
 
 .header-description{
-	grid-column: 6 / 10;
+	grid-column: 10 / 17;
 	grid-row: 2;
 	font-size: 40px;
 }
 
 .inputbox {
-	grid-column: 6 / 9;
+	grid-column: 10 / 15;
 	grid-row: 3;
 	height: 30px;
 	border-radius: 10px;
@@ -103,7 +112,7 @@ header {
 }
 
 #search {
-	grid-column: 9 / 9;
+	grid-column: 15 / 17;
 	grid-row: 3;
 	height: 30px;
 	border-radius: 10px;
@@ -112,11 +121,11 @@ header {
 	border-style: none;
 	color: white;
 	margin-left: 10px;
-	
+
 }
 
 #text {
-	grid-column: 6 / 10;
+	grid-column: 10 / 17;
 	grid-row: 4;
 	font-family: 'Raleway', sans-serif;
 	z-index: 10;
@@ -131,11 +140,13 @@ header {
 	background-color: rgb(129,211,152);
 	height: 60px;
 	width: 60px;
-	grid-column: 8;
+	grid-column: 13;
 	grid-row: 4;
 	margin-top: 40px;
 	border-radius: 50%;
 	z-index: 10;
+	margin-top: 71px;
+	color: white;
 }
 
 #circle-button:hover {
@@ -143,25 +154,25 @@ header {
 }
 
 #arrow {
-	width: 30%;
+	font-size: 40px;
+	padding: 10px;
 }
 
 /* Product Description */
 
 .product-description {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(24, 1fr);
 	grid-template-rows: 1fr;
 	font-family: 'Raleway', sans-serif;
 
 }
 
 .product-description .container {
-	grid-column: 2 / 6;
+	grid-column: 8 / 19;
 	text-align: center;
 	line-height: 1.5em;
-	font-size: 1rem;
-	padding-bottom: 10px;
+	font-size: 18px;
 }
 
 .product-description button {
@@ -174,50 +185,74 @@ header {
 }
 
 /* Product Listing */
+.service {
+	display: grid;
+	grid-template-columns: repeat(36, 1fr);
+	margin-top: 7%;
+}
+
+#header {
+	display: grid;
+	grid-column: 18 / 22;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	height: 20px;
+}
+
+hr {
+	border: none;
+	height: 2px;
+	color: black;
+	background-color: black;
+	width: 50px;
+	margin-bottom: 2%;
+	margin-left: 50%;
+}
+
+
 .wrapper {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: minmax(100px, auto);
-	margin: 0 auto;
-	/* grid-template-areas: 
-	"header header header header"
-	"title1 title1 "
-	"description1 description1 "
-	"title2 title2 "
-	"description2 description2 " */
+    grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 2;
+	position: relative;
 }
 
 .nested {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
-	/* grid-column: span 3; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+	margin: 20px 150px 60px 100px;
 }
-
+.nested div img {
+	float: left;
+	width: 20%;
+	margin-top: 3%;
+	margin-right: 20px;
+}
 .nested div {
-	border: 1px solid;
-	padding: 10px 10px 30px 0px;
-	background-color: rgb(252,252,253);
+	border: 1px solid rgb(189, 189, 189);
+	padding: 10px 10px 10px 0px;
+	background-color: rgb(242, 242, 242);
 	border-radius: 10px;
-	grid-template-columns: 4 / 7;
-
 }
 
-.nested div h4 {
-	text-transform: capitalize;
+.description {
+	font-size: 13px;
 }
+
 
 /* Signup  & Contact */
 
 .signup {
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(24, 1fr);
 	grid-row: 6;
-
+	margin-bottom: 40px;
 }
 
 .signup div {
-	grid-column: 2 / 4;
+	grid-column: 3 / 10;
 }
 
 .signup h3 {
@@ -228,11 +263,11 @@ header {
 
 .signup h3#subtext {
 	color: rgb(116, 72, 215);
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .button span {
-	font-size: .8rem;
+	font-size: .7rem;
 	font-weight: 500;
 }
 
@@ -240,19 +275,20 @@ header {
 	background-color: rgb(116, 72, 215);
 	color: white;
 	height: 20px;
-	width: 150px;
-
+	width: 160px;
+	padding-right: 0px;
+	padding-left: 15px;
 	border-radius: 10px;
-	grid-column: 6;
-	/* grid-gap: 10px; */
+	grid-column: 20;
 }
 
 .button#contact-btn {
 	background-color: rgb(255, 255, 255);
 	color: black;
 	height: 20px;
-	/* grid-gap: 10px; */
+	width: 80px;
 	border-radius: 10px;
+	margin-left: 20px;
 }
 
 
@@ -260,8 +296,7 @@ header {
 /* Footer */
 footer {
 	display: grid;
-	grid-template-columns: repeat(14. 1fr);
-	grid-template-rows: 2;
+	/* grid-template-columns: repeat(14. 1fr); */
 	background-color: rgb(115,111,223);
 	color: white;
 	padding: 80px;
@@ -269,7 +304,7 @@ footer {
 
 .col1 {
 	grid-column: 2;
-	
+	font-weight: 500;
 }
 
 .col2 {
@@ -296,3 +331,6 @@ footer {
 
 
 
+@media screen and (max-width: 700px) {
+	
+}
