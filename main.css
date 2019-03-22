@@ -6,11 +6,14 @@ font-size: 1.1vw;
 
 
 /* Background colors */
-
+.background-container {
+	width: 100%;
+	height: 100%;
+}
 #drk-purple {
     background-color: rgb(117, 45, 209);
-    width: 100vw;
-    height: 35vh;
+    height: 30%;
+    width: 100%;
 	top: -22%;
 	z-index: -10;
     transform: skewY(-11deg);
@@ -18,16 +21,17 @@ font-size: 1.1vw;
 }
 #med-purple {
     background-color: rgb(116,72,215);
-    height: 60vh;
-	width: 100vw;
+    height: 70%;
+	width: 100%;
 	z-index: -10;
 	transform: skewY(-10deg);
-    position: absolute;
+	position: absolute;
+	top: 0%;
 }
 #light-purple {
     background-color: rgb(115,111,223);
     height: 25vh;
-    width: 100vw;
+    width: 100%;
 	top: 60%;
 	z-index: -10;
     transform: skewY(-10deg);
@@ -52,6 +56,7 @@ font-size: 1.1vw;
 	grid-template-rows: auto auto auto auto;
 	margin-top: 20px;
 	max-width: 1600px;
+	max-height: 1900px;
 	grid-template-areas:
 	". . logo  . . . home whyus contact login support-btn ." 
 	". . . . main main main main . . . ."
@@ -185,6 +190,7 @@ input {
 	font-size: 3vw;
 	padding: 10px;
 	color: white;
+	/* position: absolute; */
 }
 
 
@@ -492,33 +498,295 @@ footer p {
 	}
 } */
 
-@media screen and (min-width: 760px) {
+/* @media screen and (max-width: 760px) {
 	#wrapper {
 		display: grid;
-		height: 100%;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto auto auto auto;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto ;
 		margin-top: 20px;
+		transition-duration: 2s;
 		max-width: 1600px;
 		grid-template-areas:
-		". . logo  . . . home whyus contact login support-btn ." 
-		". . . . main main main main . . . ."
-		". . . . input input input search-btn . . . ."
-		". . . . header-text header-text header-text header-text . . . ."
-		". . . . . circle-btn circle-btn . . . . . "
+		". . logo  . . . . . . . . ." 
+		". . main main main main main main main main main ."
+		". . input input input input input input search-btn search-btn . ."
+		". . header-text header-text header-text header-text header-text header-text header-text header-text . ."
 		". . section1 section1 section1 section1 section1 section1 section1 section1 . ."
-		". . . . create-btn create-btn create-btn create-btn . . . ."
-		". . . . service-header service-header service-header service-header . . . . "
-		". scL scL scL scL scL scR scR scR scR scR ."
-		". bottom-container bottom-container bottom-container bottom-container . . . create-acnt-btn create-acnt-btn contact-btn .";
-		/* "footer footer footer footer footer footer footer footer footer footer footer footer";	 */
+		". . create-btn create-btn create-btn create-btn create-btn create-btn create-btn . . ."
+		". . service-header service-header service-header service-header service-header service-header service-header service-header . . "
+		". scL scL scL scL scL scL scL scL scL scL ."
+		". scR scR scR scR scR scR scR scR scR scR ."
+		". . bottom-container bottom-container bottom-container bottom-container create-acnt-btn create-acnt-btn . contact-btn contact-btn ."
+		". . . . . . . . . . . .";
+	}
+
+	body {
+		font-size: 12px;
+	}
+
+
+	#circle-btn {
+		display:none;
+	}
+
+	#support-btn {
+		display: none;
+	}
+	.main-content {
+		font-size: 3vw;
+		color: white;
+		transition-duration: 2s;
+	}
+	
+	input {
+		font-size: 2vw;
+	}
+	#search-btn {
+		padding: 13px;
+		font-size: 1.5vw;
+	}
+	
+	#learn-more-text {
+		text-align: center;
+		font-size: 3vw;
+		line-height: 2;
+		margin-top: 100px;
+		
+	}
+	
+	.section1 {
+		font-size: 3.5vw;
+
+	}
+
+	#create-btn {
+		width: 90%;
+		height: 50%;
+		font-size: 1em;
+		justify-self: center;
+	}
+
+	#header {
+		font-size: 2em;
+	}
+	.service-card1 , .service-card2, .service-card3, .service-card4, img {
+		width: 100%;
+		float: left;
+	}
+	.service-containerL {
+		margin: 0;
+	}
+
+	.service-containerR {
+		margin-top: 20px;
+	}
+
+	#bottom-context {
+		margin: 20px;
+	}
+	#bottom-context h3 {
+		grid-area: bottom-container;
+		font-size: 2em;
+		margin: 0;
+	}
+
+	.button#create-account-btn {
+		margin: 30px;
+		justify-self: auto;
+		font-size: 1em;
+	}
+	.button#contact-btn {
+		margin-top: 80px;
+		margin-left: -85px;
+		justify-self: auto;
+		font-size: 1em;
+	}
+	#drk-purple {
+		top: 0;
+		transform: skewY(0deg);
+		z-index: -10;
+	} */
+
+	/* #med-purple {
+		height: 50vh;
+		transform: skewY(0deg);
+		z-index: -10;
+	}
+
+	#light-purple {
+		transform: skewY(0deg);
+		z-index: -10;
+		height: 20vh;
+	}
+
+	#gray {
+		top: 180%;
+		transform: skewY(0deg);
+		z-index: -10;
+	} */
+
+	
+	/* .service-card1 img {
+		display:flex;
+		width: 10%;
+		overflow: hidden;
+		margin-top: 0;
+		
+	}
+	
+	.service-card2 img {
+		display: flex;
+		width: 10%;
+		margin-top: 0;
+	}
+	
+	.service-card3 img {
+		display:flex;
+		width: 10%;
+		margin-top: 0;
+	}
+	
+	.service-card4 img {
+		display:flex;
+		width: 10%;
+		margin-top: 0;
+	}
+
+} */
+
+
+@media screen and (max-width: 926px) {
+	
+	#drk-purple {
+		width: 100%;
+		height: 40%;
+		transition-duration: 2s;
+
+	}
+
+	#med-purple {
+		width: 100%;
+		height: 35%;
+		transition-duration: 2s;
+
+	}
+
+	#light-purple {
+		height: 20%;
+		top: 42%;
+		transition-duration: 2s;
+
+	}
+
+	#gray {
+		height: -500%;
+		transition-duration: 2s;
+
+	}
+
+	#wrapper {
+		width: 100%;
+		transition-duration: 2s;
+	}
+
+	p#learn-more-text {
+		font-size: 9px;
+		margin-top: 150px;
 	}
 
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (min-width:1025px) and (max-width: 1400px) {
+	#drk-purple {
+		width: 100%;
+		height: 25%;
+		transition-duration: .5s;
+	}
+
+	#med-purple {
+		width: 100%;
+		height: 60%;
+		top: 2%;
+		transition-duration: .5s;
+	}
+
+	#light-purple {
+		height: 15%;
+		top: 58%;
+		transition-duration: .5s;
+	}
+
+	#gray {
+		height: 50%;
+		top: 160%;
+		transition-duration: .5s;
+	}
+
+	p#learn-more-text {
+		font-size: 12px;
+		margin-top: 150px;
+	}
+
+	.main-content {
+		width: 200%;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	#arrow {
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#drk-purple {
+		width: 100%;
+		height: 25%;
+		transition-duration: 2s;
+	}
+
+	#med-purple {
+		width: 100%;
+		height: 60%;
+		top: 2%;
+		transition-duration: 2s;
+	}
+
+	#light-purple {
+		height: 15%;
+		top: 58%;
+		transition-duration: 2s;
+	}
+
+	#gray {
+		height: 50%;
+		top: 160%;
+		transition-duration: 2s;
+	}
+
+	#wrapper {
+		width: 100%;
+	}
+
+	p#learn-more-text {
+		font-size: 11px;
+		margin-top: 150px;
+	}
+
+	.main-content {
+		width: 200%;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	#arrow {
+		padding: 15px;
+	}
+}
+
+ @media screen and (max-width: 860px) {
 	/* for mobile phones */
-	nav {
+	 nav {
 		display: none;
 	}
 	#drk-purple {
@@ -544,6 +812,5 @@ footer p {
 		top: 210%;
 		transform: skewY(0deg);
 		z-index: -10;
-	}
+	} 
 
-}
